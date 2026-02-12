@@ -9,7 +9,6 @@ pipeline {
                 git branch: 'develop',
                     url: 'https://github.com/migueldonaire/todo-list-aws.git',
                     credentialsId: 'github-credentials'
-                // Download config from separate repo (staging branch)
                 sh '''
                     curl -o samconfig.toml https://raw.githubusercontent.com/migueldonaire/todo-list-aws-config/staging/samconfig.toml
                     echo "Downloaded samconfig.toml from config repo (staging)"
